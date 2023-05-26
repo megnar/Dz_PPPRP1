@@ -1,0 +1,10 @@
+# Dockerfile.microservice-a
+FROM golang:latest
+
+WORKDIR /app
+
+COPY . .
+
+RUN go build -o microservice-a .
+
+CMD ["/app/microservice-a"]
